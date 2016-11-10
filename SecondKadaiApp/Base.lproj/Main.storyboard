@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,27 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JO4-qT-CDf">
-                                <rect key="frame" x="94" y="208" width="187" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JO4-qT-CDf">
+                                <rect key="frame" x="70" y="200" width="235" height="16"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wmg-aa-YjZ">
-                                <rect key="frame" x="154" y="403" width="66" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wmg-aa-YjZ">
+                                <rect key="frame" x="150" y="411" width="75" height="26"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
                                 <state key="normal" title="Enter"/>
                                 <connections>
                                     <segue destination="Wtw-zP-YZk" kind="show" id="FDc-rP-BaO"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名前を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H5k-y5-t3D">
-                                <rect key="frame" x="103" y="258" width="169" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名前を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H5k-y5-t3D">
+                                <rect key="frame" x="100" y="256" width="175" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.87017617449999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="H5k-y5-t3D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="6JO-Bu-qeH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wmg-aa-YjZ" secondAttribute="bottom" constant="230" id="7pP-x7-Ryp"/>
+                            <constraint firstAttribute="trailing" secondItem="Wmg-aa-YjZ" secondAttribute="trailing" constant="150" id="BL8-bf-lYf"/>
+                            <constraint firstItem="Wmg-aa-YjZ" firstAttribute="top" secondItem="H5k-y5-t3D" secondAttribute="bottom" constant="100" id="KeW-V0-dfP"/>
+                            <constraint firstAttribute="trailing" secondItem="JO4-qT-CDf" secondAttribute="trailing" constant="70" id="UTk-kw-L0U"/>
+                            <constraint firstItem="JO4-qT-CDf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="70" id="Y3l-9F-c3I"/>
+                            <constraint firstItem="H5k-y5-t3D" firstAttribute="top" secondItem="JO4-qT-CDf" secondAttribute="bottom" constant="40" id="bPJ-Pr-Yya"/>
+                            <constraint firstItem="JO4-qT-CDf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="180" id="cIl-D0-OZZ"/>
+                            <constraint firstAttribute="trailing" secondItem="H5k-y5-t3D" secondAttribute="trailing" constant="100" id="kPS-hq-q9R"/>
+                            <constraint firstItem="Wmg-aa-YjZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="150" id="p4n-Yi-1eS"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -61,14 +74,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SM3-Ap-o5L">
-                                <rect key="frame" x="26" y="206" width="320" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SM3-Ap-o5L">
+                                <rect key="frame" x="10" y="206" width="355" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.1751258389" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5f3-KG-ZEp">
-                                <rect key="frame" x="159" y="359" width="57" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5f3-KG-ZEp">
+                                <rect key="frame" x="155" y="355" width="65" height="36"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
@@ -78,6 +91,15 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5f3-KG-ZEp" firstAttribute="leading" secondItem="Rqh-dQ-oQW" secondAttribute="leadingMargin" constant="139" id="DYa-Zu-SPH"/>
+                            <constraint firstItem="nR1-jh-kIF" firstAttribute="top" secondItem="5f3-KG-ZEp" secondAttribute="bottom" constant="276" id="F1X-yA-iQB"/>
+                            <constraint firstAttribute="trailing" secondItem="SM3-Ap-o5L" secondAttribute="trailing" constant="10" id="LOw-bb-cF5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5f3-KG-ZEp" secondAttribute="trailing" constant="139" id="ddE-ah-L2r"/>
+                            <constraint firstItem="5f3-KG-ZEp" firstAttribute="top" secondItem="SM3-Ap-o5L" secondAttribute="bottom" constant="128" id="je7-rL-KGh"/>
+                            <constraint firstItem="SM3-Ap-o5L" firstAttribute="top" secondItem="6i2-v4-BfB" secondAttribute="bottom" constant="186" id="m1M-lE-W1g"/>
+                            <constraint firstItem="SM3-Ap-o5L" firstAttribute="leading" secondItem="Rqh-dQ-oQW" secondAttribute="leading" constant="10" id="zTx-rx-FmT"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -87,7 +109,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8je-fa-ZsL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Oik-BH-QOq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="346.5" y="355.5"/>
+            <point key="canvasLocation" x="651.5" y="403.5"/>
         </scene>
     </scenes>
 </document>
